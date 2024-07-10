@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #282c34;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    background-color: #61dafb;
+    border: none;
+    color: #282c34;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #21a1f1;
+}
+
+.keyboard button {
+    background-color: #61dafb;
+    border: none;
+    color: #282c34;
+    padding: 10px;
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.keyboard button:hover {
+    background-color: #21a1f1;
+}
+
+.status {
+    margin-top: 20px;
+}
+
+#hint {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #61dafb;
+}
+
+#category-list button {
+    background-color: #61dafb;
+    border: none;
+    color: #282c34;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#category-list button:hover {
+    background-color: #21a1f1;
+}
+
+.instructions {
+    margin: 20px;
+}
+
+.instructions ul {
+    text-align: left;
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: disc;
+    max-width: 400px;
+}
+
+.instructions ul li {
+    margin: 10px 0;
+}
+
+.difficulty-selection {
+    text-align: center;
+}
+
+.difficulty-selection button {
+    background-color: #61dafb;
+    border: none;
+    color: #282c34;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.difficulty-selection button:hover {
+    background-color: #21a1f1;
+}
+
+.keyboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.alphabet-container,
+.number-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 5px 0;
+}
+
+.alphabet-container button,
+.number-container button {
+    background-color: #61dafb;
+    border: none;
+    color: #282c34;
+    padding: 10px;
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.alphabet-container button:hover,
+.number-container button:hover {
+    background-color: #21a1f1;
+}
+
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <h1>The Hangman Game</h1>
+            <button onclick="showDifficultySelection()">Play</button>
+            <button onclick="showInstructions()">How to Play</button>
+        </div>
+
+        <div class="difficulty-selection hidden">
+            <h2>Select Difficulty</h2>
+            <button onclick="selectDifficulty('easy')">Easy</button>
+            <button onclick="selectDifficulty('medium')">Medium</button>
+            <button onclick="selectDifficulty('hard')">Hard</button>
+            <button onclick="backToMenu()">Back</button>
+        </div>
+
+        <div class="category-selection hidden">
+            <h2>Pick a Category</h2>
+            <div id="category-list"></div>
+            <button onclick="backToDifficulty()">Back</button>
+        </div>
+
+        <div class="game hidden">
+            <h2 id="category"></h2>
+            <div id="hint"></div>
+            <div id="word"></div>
+            <div class="keyboard"></div>
+            <div class="status">
+                <p>Health: <span id="health">8</span></p>
+                <p>Hints Remaining: <span id="hints-remaining">3</span></p>
+                <button onclick="useHint()">Use Hint</button>
+                <button onclick="pauseGame()">Pause</button>
+            </div>
+        </div>
+
+        <div class="pause-menu hidden">
+            <h2>Game Paused</h2>
+            <button onclick="resumeGame()">Continue</button>
+            <button onclick="chooseNewCategory()">New Category</button>
+            <button onclick="quitGame()">Quit Game</button>
+        </div>
+
+        <div class="instructions hidden">
+            <h2>How to Play</h2>
+            <p>Welcome to the Hangman Game! Here's how you can play:</p>
+            <ul>
+                <li>Click "Play" to start the game.</li>
+                <li>Select a difficulty level.</li>
+                <li>Pick a category from the list provided.</li>
+                <li>A word from the chosen category will be selected randomly.</li>
+                <li>You will see the word as a series of underscores (_), representing each letter of the word.</li>
+                <li>Use the on-screen keyboard to guess letters and numbers. Click on a character to make a guess.</li>
+                <li>If the guessed character is in the word, it will replace the corresponding underscores.</li>
+                <li>If the guessed character is not in the word, your health decreases by one.</li>
+                <li>You have 8 guesses (health) in total. The game ends when you either guess the entire word or run out of guesses.</li>
+                <li>You can pause the game at any time and choose to continue, pick a new category, or quit the game.</li>
+                <li>You can use up to 3 hints during the game. Each hint reveals one letter in the word.</li>
+                <li>Use the "New Category" button after winning or losing to choose a new category and play again.</li>
+            </ul>
+            <button onclick="hideInstructions()">Back</button>
+        </div>
+
+        <div class="result hidden">
+            <h2 id="result-message"></h2>
+            <button onclick="showCategorySelection()">New Category</button>
+            <button onclick="quitGame()">Quit Game</button>
+        </div>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>
